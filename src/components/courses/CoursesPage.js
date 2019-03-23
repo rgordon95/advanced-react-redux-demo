@@ -1,22 +1,20 @@
 import React from 'react';
 
 class CoursesPage extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
+    state = {
       course: {
         title: ""
       }
-    }
-  }
+    };
 
-  handleChange(event) {
+
+  handleChange = (event) => {
     const course = { ...this.state.course, title: event.target.value};
     this.setState({ course: course });
     this.setState({ course }); //same as above line (shorthand)
 
-  }
+  };
 
   render() {
     return (
