@@ -58,7 +58,7 @@
       "babel-preset-react-app"
     ]
   },
-"eslintConfig": {
+  "eslintConfig": {
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
