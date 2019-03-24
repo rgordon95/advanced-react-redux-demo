@@ -4,6 +4,7 @@ import { loadCourses } from '../../redux/actions/courseActions';
 import { loadAuthors } from '../../redux/actions/authorActions';
 import PropTypes from 'prop-types';
 
+
 function ManageCoursePage( { courses, authors, loadAuthors, loadCourses }) {
   useEffect( () => {
 
