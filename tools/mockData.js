@@ -10,21 +10,21 @@ const courses = [
     id: 2,
     title: "React: The Big Picture",
     slug: "react-big-picture",
-    authorId: 1,
+    authorId: 2,
     category: "JavaScript"
   },
   {
     id: 3,
     title: "Creating Reusable React Components",
     slug: "react-creating-reusable-components",
-    authorId: 1,
+    authorId: 3,
     category: "JavaScript"
   },
   {
     id: 4,
     title: "Building a JavaScript Development Environment",
     slug: "javascript-development-environment",
-    authorId: 1,
+    authorId: 2,
     category: "JavaScript"
   },
   {
@@ -45,28 +45,28 @@ const courses = [
     id: 7,
     title: "Clean Code: Writing Code for Humans",
     slug: "writing-clean-code-humans",
-    authorId: 1,
+    authorId: 3,
     category: "Software Practices"
   },
   {
     id: 8,
     title: "Architecting Applications for the Real World",
     slug: "architecting-applications-dotnet",
-    authorId: 1,
+    authorId: 2,
     category: "Software Architecture"
   },
   {
     id: 9,
     title: "Becoming an Outlier: Reprogramming the Developer Mind",
     slug: "career-reboot-for-developer-mind",
-    authorId: 1,
+    authorId: 3,
     category: "Career"
   },
   {
     id: 10,
     title: "Web Component Fundamentals",
     slug: "web-components-shadow-dom",
-    authorId: 1,
+    authorId: 2,
     category: "HTML5"
   }
 ];
