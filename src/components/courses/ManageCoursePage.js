@@ -47,8 +47,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-      loadCourses: loadCourses,
-      loadAuthors: loadAuthors
+      loadCourses,
+      loadAuthors
   };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
