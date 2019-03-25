@@ -15,7 +15,8 @@ export function updateCourseSuccess(course) {
 
 export function loadCourses() {
   return function (dispatch) {
-    return courseApi.getCourses()
+    return courseApi
+    .getCourses()
     .then(courses => {
       dispatch(loadCourseSuccess(courses));
     })
@@ -24,7 +25,6 @@ export function loadCourses() {
     });
   };
 }
-
 
 export function saveCourse(course) {
   //eslint-disable-next-line no-unused-vars

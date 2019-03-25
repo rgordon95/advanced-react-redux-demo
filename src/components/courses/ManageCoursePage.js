@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { loadCourses } from '../../redux/actions/courseActions';
+import { loadCourses, saveCourse } from '../../redux/actions/courseActions';
 import { loadAuthors } from '../../redux/actions/authorActions';
 import PropTypes from 'prop-types';
 import CourseForm from './CourseForm';
 import { newCourse } from '../../../tools/mockData';
 
-function ManageCoursePage( { courses, authors, loadAuthors, loadCourses, ...props }) {
+function ManageCoursePage( { courses, authors, loadAuthors, loadCourses, saveCourse, history, ...props }) {
   const [course, setCourse] = useState({...props.course});
   const [errors, setErrors] = useState({});
   useEffect( () => {
@@ -28,11 +28,27 @@ function ManageCoursePage( { courses, authors, loadAuthors, loadCourses, ...prop
 function handleChange(event) {
   const { name, value } = event.target;
   setCourse(prevCourse => ({
-    [name]: name === "author" ? parseInt(value, 10) : value
+    ...prevCourse,
+    [name]: name === "authorId" ? parseInt(value, 10) : value
   }));
 }
 
-  return <CourseForm course={course} errors={errors} authors={authors} onChange={handleChange} />;
+function handleSave(event) {
+  event.preventDefault();
+  saveCourse(course).then( () => {
+    history.push("/courses");
+  });
+}
+
+      return (
+        <CourseForm
+        course={course}
+        errors={errors}
+        authors={authors}
+        onChange={handleChange}
+        onSave={handleSave}
+    />
+  );
 }
 
 ManageCoursePage.propTypes = {
@@ -40,7 +56,9 @@ ManageCoursePage.propTypes = {
   course: PropTypes.object.isRequred,
   courses: PropTypes.array.isRequred,
   loadCourses: PropTypes.func.isRequred,
-  loadAuthors: PropTypes.func.isRequred
+  loadAuthors: PropTypes.func.isRequred,
+  saveCourse: PropTypes.func.isRequred,
+  history: PropTypes.object.isRequred
 };
 
 function mapStateToProps(state) {
@@ -53,7 +71,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
       loadCourses,
-      loadAuthors
+      loadAuthors,
+      saveCourse
   };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
