@@ -69,14 +69,6 @@
       "slug": "web-components-shadow-dom",
       "authorId": 2,
       "category": "HTML5"
-    },
-    {
-      "id": 11,
-      "title": "test",
-      "authorId": 3,
-      "category": "tewst",
-      "createdAt": 1553543527689,
-      "slug": "test"
     }
   ],
   "authors": [
