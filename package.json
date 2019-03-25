@@ -9,6 +9,9 @@
     "test": "jest --watch"
   },
   "jest": {
+    "setupFiles": [
+      "./tools/testSetup.js"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gi|eot|otf|webp|svg|ttf|woff|woff2|mp4|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/fileMock.js",
       "\\.(css|less|sass)$": "<rootDir>/tools/styleMock.js"

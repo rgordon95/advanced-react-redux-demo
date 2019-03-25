@@ -60,7 +60,7 @@ CourseForm.propTypes = {
   course: PropTypes.object.isRequired,
   errors: PropTypes.object,
   onSave: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   saving: PropTypes.bool
 };
 
