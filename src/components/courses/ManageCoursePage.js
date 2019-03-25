@@ -15,6 +15,8 @@ function ManageCoursePage( { courses, authors, loadAuthors, loadCourses, saveCou
     .catch(error => {
       alert("Loading courses failed.." + error);
     });
+  } else {
+    setCourse({ ...props.course});
   }
 
   if (authors.length === 0 ) {
@@ -22,8 +24,6 @@ function ManageCoursePage( { courses, authors, loadAuthors, loadCourses, saveCou
   .catch(error => {
     alert("Loading authors failed.." + error);
     });
-  } else {
-    setCourse({ ...props.course});
   }
 }, [props.course]);
 
