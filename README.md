@@ -1,4 +1,4 @@
-# Starter Kit for [Building Applications in React and Redux]
+# Starter Kit for Building Applications in React and Redux
 
 ## Get Started
 
