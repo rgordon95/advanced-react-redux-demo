@@ -1,20 +1,20 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpackBundleAnalyzer = require("webpack-bundle-analyzer");
 
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = "production";
 
 module.exports = {
-  mode: 'production',
-  target: 'web',
-  devtool: 'source-map',
-  entry: './src/index',
+  mode: "production",
+  target: "web",
+  devtool: "source-map",
+  entry: "./src/index",
   output: {
     path: path.resolve(__dirname, "build"),
-    publicPath: '/',
-    filename: 'bundle.js'
+    publicPath: "/",
+    filename: "bundle.js"
   },
   plugins:  [
     // Display bundle stats
@@ -34,7 +34,7 @@ module.exports = {
       favicon: "src/favicon.ico",
       minify: {
         // see https://github.com/kangax/html-minifier#options-quick-reference
-        removecomments: true,
+        removeComments: true,
         collapseWhitespace: true,
         removeRedundantAttributes: true,
         useShortDoctype: true,
